@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DialogAnimationSlideUp">
+        <item name="android:windowEnterAnimation">@anim/enter_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/exit_to_bottom</item>
+    </style>
+
+</resources>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!--
+
+        android:layout_gravity="bottom"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        app:behavior_skipCollapsed="true"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+
+    -->
+
+    <RelativeLayout
+        android:id="@+id/dialog_select_address_layout_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+
+        android:layout_gravity="bottom"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        app:behavior_skipCollapsed="true"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+
+        >
+
+        <Space
+            android:id="@+id/dialog_select_address_space_top"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_alignParentTop="true" />
+
+        <LinearLayout
+            android:id="@+id/dialog_select_address_layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/dialog_select_address_space_bottom"
+            android:layout_below="@id/dialog_select_address_space_top"
+            android:background="@drawable/shape_rounded_top"
+            android:backgroundTint="#FFFFFF"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/dialog_select_address_iv_line"
+                    android:layout_width="38dp"
+                    android:layout_height="4dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/shape_rounded_large"
+                    android:backgroundTint="#D8DDE6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/dialog_select_address_iv_close"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="gone"
+                    android:background="@android:drawable/ic_menu_close_clear_cancel"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/dialog_select_address_tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Select location"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#1f242e"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <View
+                android:id="@+id/dialog_select_address_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="#D8DDE6"
+                android:visibility="gone"
+                app:layout_goneMarginTop="8dp" />
+
+            <EditText
+                android:id="@+id/dialog_select_address_et_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_round_border_hint"
+                android:gravity="bottom"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:lines="1"
+                android:maxLines="1"
+                android:minLines="1"
+                android:hint="Enter your location"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="12dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:textAllCaps="false"
+                android:textColor="#1f242e"
+                android:textColorHint="#838da2"
+                android:textCursorDrawable="@null"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:importantForAutofill="no"
+                tools:ignore="LabelFor" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/dialog_select_address_rv_suggestions"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <Space
+            android:id="@+id/dialog_select_address_space_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#00aa5e" />
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
