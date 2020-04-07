@@ -1,4 +1,4 @@
-package com.sashakhyzhun.dialogforresult
+package com.sashakhyzhun.dialogforresult.data
 
 import java.lang.Exception
 

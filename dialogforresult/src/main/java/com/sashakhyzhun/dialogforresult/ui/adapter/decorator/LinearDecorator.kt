@@ -1,4 +1,4 @@
-package com.sashakhyzhun.example.ui.decorator
+package com.sashakhyzhun.dialogforresult.ui.adapter.decorator
 
 import android.graphics.Rect
 import android.view.View

@@ -1,4 +1,4 @@
-package com.sashakhyzhun.dialogforresult
+package com.sashakhyzhun.dialogforresult.ui.base
 
 import android.content.Context
 import android.graphics.Color
@@ -10,12 +10,14 @@ import android.view.ViewGroup
 import android.view.Window
 import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.DialogFragment
+import com.sashakhyzhun.dialogforresult.R
 
 open class BaseDialogFragment : DialogFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        dialog?.window?.attributes?.windowAnimations = R.style.DialogAnimationSlideUp
+        dialog?.window?.attributes?.windowAnimations =
+            R.style.DialogAnimationSlideUp
     }
 
     override fun onStart() {

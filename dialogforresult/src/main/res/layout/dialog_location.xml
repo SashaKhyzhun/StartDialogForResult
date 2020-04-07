@@ -92,6 +92,7 @@
                 android:layout_marginTop="8dp"
                 android:text="Select location"
                 android:textAlignment="center"
+                android:gravity="center"
                 android:textAllCaps="false"
                 android:textColor="#1f242e"
                 android:textSize="18sp"
